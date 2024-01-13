@@ -1,113 +1,102 @@
-import Image from 'next/image'
+'use client'
+import React from 'react'
+import Hero from '../components/home/Hero'
+import { Featured } from '../components/home/Featured'
+import { AuctionHome } from '../components/home/AuctionHome'
+import { Explore } from '../components/home/Explore'
+import { FadeIn } from '../components/home/FadeIn'
+// import { Newsletter } from '../../components/Newsletter/Newsletter'
+import { Newsletter } from '@/components/home/Newsletter'
+// import { Footer } from '../../components/Footer/Footer'
+import { Footer } from '@/components/home/Footer'
+// import Transitions from '../../components/transition/Transition'
+import Transitions from '@/components/home/Transition'
+import { MobileHero } from '../components/home/MobileHero'
+
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <Transitions>
+    <div>
+    {/* Hero section */}
+      <section>
+      <h1
+      className="clash-d2 mb-[30px] px-4 font-medium md:font-semibold text-center md:text-[80px] text-[2rem] leading-[150%] md:leading-[120%] mt-10 mx-auto 
+      tracking-wide"
+    >
+      Photography is poetry <span className='md:inline hidden'>& <br /></span> <span className='md:hidden'>and</span> beautiful untold stories
+    </h1>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+    <p className="text-center md:text-[1.25rem] px-4 font-medium leading-[156%] md:leading-[120%] mx-auto  ">
+      Flip through more than 10,000 vintage shots, old photograghs, historic
+      <br className='hidden md:inline' /> images and captures seamlessly in one place. Register to get top
+      access.
+    </p>
+    <div className='md:overflow-x-scroll'>
+                  <Hero />
+                  <MobileHero />
+              </div>
+      </section>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <main>
+        {/* Featured section */}
+      <section className='mb-[100px] md:mb-[186px]'>
+                  <div className='container mx-auto px-4 md:px-0'>
+                      <h2 className='font-bold md:font-medium text-[1.75rem] md:text-[3rem] leading-[4rem] md:mb-9'>Featured products</h2>
+                      <div className=''>
+                          <Featured 
+                          />
+                      </div>
+                  </div>
+              </section>
+            {/* home auction section */}
+              <section className='gradient mb-[100px] md:mb-[190px]'>
+                  <AuctionHome />
+              </section>
+            {/* explore section */}
+              <section className='mb-[100px] md:mb-[180px]'>
+                  <Explore content="Explore marketplace" link="/marketplace"/>
+                  <Explore content="See auctions" link='/auctions'/>
+              </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+              <section className='bg-[#e2e2e2] mb-[66px] md:mb-[147px]'>
+                  <div className="container font-clash mx-auto md:py-[75px] relative">
+                      <div className='overflow-hidden relative'>
+                          <article className='flex justify-between'>
+                              <h2 className='font-semibold mt-[7px] md:mt-0 text-[1.5rem] md:text-[55px] leading-[155%] text-[#161616] max-w-[256px] md:max-w-[535px]'>TOP CREATORS OF THE WEEK</h2>
+                              <div className='flex'>
+                                  <div className='hidden md:block rounded-full w-2.5 bg-[#AEAEAE] border mr-[34px] overflow-hidden flex items-end'>
+                                      <div className="w-full h-1/5 bg-grey-dark rounded-full"></div>
+                                  </div>
+                                  <ul className='absolute -right-24 md:relative md:right-0  text-grey text-[10px] md:text-[2.5rem] leading-[155%] mr-8 flex md:block gap-4'>
+                                      <li className='mb-5'>Editorial</li>
+                                      <li className='mb-5'>Fashion</li>
+                                      <li className='mb-5'>Lifestyle</li>
+                                      <li className=''>Blueprint</li>
+                                  </ul>
+                              </div>
+                          </article>
+                          <p className='text-[13px] md:text-3xl relative leading-[130%] text-black/[0.57] font-[200] md:mr-[12rem] mt-9'>“Everything always looked better in black and white. Everything always  as if it were the first time; there’s always more people in a black and white photograph. It just makes it seem that there were more people at a gig, more people at a football match, than with colour photography. Everything looks more exciting.”– Jack Lowden
+                              <span className="text-grey text-[2rem] md:text-[3rem] leading-[155%] font-bold absolute bottom-8 right-0 md:right-8">CIRCA</span>
+                          </p>
+                          <div className='flex md:my-[75px]'><p className='my-4 ml-auto md:mr-8 font-bold text-[4rem] md:text-[170px] text-[#161616] md:leading-[150px] line-through decoration-8'>1985</p></div>
+                      </div>
+                      <FadeIn />
+                  </div>
+              </section>
+              <section className='mb-[30px] md:mb-[3.75rem] px-4 md:px-0'  >
+                  <Newsletter />
+              </section>
+              <div  className='px-4 md:px-0'>
+                    <Footer />
+              </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+             
+      </main>
+  </div>
+  </Transitions>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    )
 }
+
+
