@@ -1,10 +1,12 @@
+
 import { useState, useEffect } from 'react'
 
-import image1 from '../../assets/carouselImage/Homepage-carousel-WEB.png'
-import image2 from '../../assets/carouselImage/Homepage-carousel-WEB-1.png'
-import image3 from '../../assets/carouselImage/Homepage-carousel-WEB-2.png'
-import image4 from '../../assets/carouselImage/Homepage-carousel-WEB-3.png'
-import image5 from '../../assets/carouselImage/Homepage-carousel-WEB-4.png'
+// import image1 from '../../assets/carouselImage/Homepage-carousel-WEB.png'
+import image1 from '@/public/assets/carouselImage/Homepage-carousel-WEB.png'
+import image2 from '@/public/assets/carouselImage/Homepage-carousel-WEB-1.png'
+import image3 from '@/public/assets/carouselImage/Homepage-carousel-WEB-2.png'
+import image4 from '@/public/assets/carouselImage/Homepage-carousel-WEB-3.png'
+import image5 from '@/public/assets/carouselImage/Homepage-carousel-WEB-4.png'
 function Hero() {
     //Display all the Hero images in an array
     const [images, setImages] = useState([image1, image2, image3, image4, image5]);

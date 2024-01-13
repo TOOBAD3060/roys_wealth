@@ -1,12 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link' 
 import {MdOutlineKeyboardArrowDown} from 'react-icons/md'
 
 export const Explore = ({link,content}) => {
   return (
     
     <div className='text-[1.5rem] md:text-[2.5rem] font-medium px-4 md:px-0 py-5 md:p-8 border-y border-y-grey color-grey last:border-t-[0] hover:px-8 cursor-pointer'>
-    <Link to={link}>
+    <Link href={link}>
         <div className="container mx-auto flex items-center justify-between">
             <span>{content}</span>
             <svg className='md:hidden mr-9' width="54" height="53" viewBox="0 0 54 53" fill="none" xmlns="http://www.w3.org/2000/svg">
