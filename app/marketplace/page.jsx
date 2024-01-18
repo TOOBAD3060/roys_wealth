@@ -1,12 +1,11 @@
 'use client'
-import { SkeletonLoader } from '@/components/marketplace/SkeletonLoader'
-import { Products } from '@/components/marketplace/Products'
-import SideNav from '@/components/marketplace/SideNav'
-import { useGlobalContext } from '@/Context'
-import Transitions from '@/components/home/Transition'
-import { Footer } from '@/components/home/Footer'
+import React from 'react'
 import Link from 'next/link'
-
+import Transitions from '@/components/home/Transition'
+import { useGlobalContext } from '@/Context'
+import SideNav from '@/components/marketplace/SideNav'
+import { Products } from '@/components/marketplace/Products'
+import { SkeletonLoader } from '@/components/marketplace/SkeletonLoader'
 
 function ProductPage() {
     const {products} = useGlobalContext()
@@ -18,7 +17,7 @@ function ProductPage() {
                 <SideNav />
                 <main className='px-4 md:px-11 w-full'>
                     <article className='md:hidden text-[#BCB7B7] mb-4'>
-                        <p className='text-lg font-medium leading-[51.5px] mb-4'><Link to="/">Home/</Link> <Link to="marketplace">Marketplace/</Link> <span className='text-grey'>Editorials</span></p>
+                        <p className='text-lg font-medium leading-[51.5px] mb-4'><Link href="/">Home/</Link> <Link href="marketplace">Marketplace/</Link> <span className='text-grey'>Editorials</span></p>
                         <p className='font-poppin'><i>See 1-6 of 15 results</i></p>
                     </article>
                     <div className='w-full h-[3.75rem] text-black text-lg leading-[150%] rounded-[15px] shadow-5xl md:shadow-4xl border mb-8 flex items-center justify-between px-4'>
@@ -36,9 +35,9 @@ function ProductPage() {
                 </main>
                
             </div>
-            <div  className='md:hidden px-4 md:px-0 mt-5'>
+            {/* <div  className='md:hidden px-4 md:px-0 mt-5'>
                       <Footer />
-                </div>
+                </div> */}
         </div>
     </Transitions>
     )

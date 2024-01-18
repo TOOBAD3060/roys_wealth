@@ -1,4 +1,8 @@
-import { toggleContent } from "@utils/utils";
+'use client'
+
+import { toggleContent } from "@/util/utils";
+
+
 
 function CatTitle({ title }) {
   return (
