@@ -1,4 +1,4 @@
-import { toTitleCase } from '@/utils/utils'
+import { toTitleCase } from '@/util/utils'
 import Link from 'next/link'
 import React from 'react'
 

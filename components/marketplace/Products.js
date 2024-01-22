@@ -1,9 +1,10 @@
 'use client'
 import React, {useState} from 'react'
-import { Newsletter } from '../../components/Newsletter/Newsletter'
-import { Link } from 'react-router-dom'
+// import { Newsletter } from '../../components/Newsletter/Newsletter'
+// import { Link } from 'react-router-dom'
 import { useGlobalContext } from '@/Context'
 import { ProductItems } from './ProductItem'
+
 
 
 export const Products = () => {

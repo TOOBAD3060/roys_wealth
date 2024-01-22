@@ -1,7 +1,11 @@
-import React from 'react'
-import image2 from '../../assets/carousel-second/image2.png'
-import image3 from '../../assets/carousel-second/image3.png'
-import image1 from '../../assets/carousel-second/image1.png'
+// import React from 'react'
+// import image2 from '../../assets/carousel-second/image2.png'
+import image2 from '@/public/assets/carousel-second/image2.png'
+import image3 from '@/public/assets/carousel-second/image3.png'
+// import image3 from '../../assets/carousel-second/image3.png'
+// import image1 from '../../assets/carousel-second/image1.png'
+import image1 from '@/public/assets/carousel-second/image1.png'
+
 import {  useEffect, useRef, useState } from 'react'
 
 export const FadeIn = () => {

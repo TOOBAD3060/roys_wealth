@@ -6,9 +6,18 @@ function ContextProvider({children}){
     const url = 'https://gist.githubusercontent.com/eniiku/65a95533de1f005eee35d5eb91f3e141/raw/439bc2dd8693b490539eae236918f4a53dd17457/'
     const [products, setProducts] = useState([])
     // Add cart items in localStorage on component mount if exist 
-    const [cart, setCart] = useState(localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [])
+    const [cart, setCart] = useState([])
     const [favorite, setFavorite] = useState([])
     const [name, setName] = useState('')
+
+    useEffect(()=>{      
+        if (typeof window !== "undefined") {
+            const value= localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : []
+       setCart(value)
+          }
+      
+    },[])
+
 
     useEffect(()=>{      
         //Fetch products      
@@ -33,7 +42,10 @@ function ContextProvider({children}){
 
     useEffect(()=>{
         //Add cart to location storage once cart changed
-        localStorage.setItem('cart', JSON.stringify(cart))  
+        if (typeof window !== "undefined") {
+            localStorage.setItem('cart', JSON.stringify(cart)) 
+          }
+         
     },[cart])
 
     return(

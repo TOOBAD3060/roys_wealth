@@ -1,6 +1,8 @@
 import React from 'react'
-import image from  '../../assets/upcoming-image.jpg'
-import { Link } from 'react-router-dom'
+// import image from  '../../assets/upcoming-image.jpg'
+import image from '@/public/assets/upcoming-image.jpg'
+// import Image from 'next/image'
+import Link  from 'next/link'
 
 export const AuctionHome = () => {
     const styles = {
@@ -24,8 +26,8 @@ export const AuctionHome = () => {
                 </div>
             </article>
             <div className='ml-auto mt-4 lg:mt-0 text-sm md:text-2xl'>
-                <Link to="/auctions"><span className='underline mr-[20px] mb-3.5'>See more</span></Link>
-                <Link to="/drop"><button className='border rounded-[10px] px-3.5 py-[14px]'>Set a reminder</button></Link>
+                <Link href="/auctions"><span className='underline mr-[20px] mb-3.5'>See more</span></Link>
+                <Link href="/drop"><button className='border rounded-[10px] px-3.5 py-[14px]'>Set a reminder</button></Link>
             </div>
         </div>
         <div className='flex items-center justify-between mt-[21px] hidden md:flex'>

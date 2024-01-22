@@ -1,7 +1,7 @@
 import React from 'react'
-import Rectangle242 from '../../assets/mobileHero/Rectangle242.png'
-import Rectangle240 from '../../assets/mobileHero/Rectangle240.png'
-import Rectangle241 from '../../assets/mobileHero/Rectangle241.png'
+import Rectangle242 from '@/public/assets/mobileHero/Rectangle242.png'
+import Rectangle240 from '@/public/assets/mobileHero/Rectangle240.png'
+import Rectangle241 from '@/public/assets/mobileHero/Rectangle241.png'
 
 export const MobileHero = () => {
   return (

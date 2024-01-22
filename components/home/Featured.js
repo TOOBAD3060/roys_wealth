@@ -1,9 +1,13 @@
-import React from 'react'
-import eclipse1 from '../../assets/eclipse/Ellipse-14.png'
-import eclipse2 from '../../assets/eclipse/Ellipse-15.png'
-import eclipse3 from '../../assets/eclipse/Ellipse-16.png'
-import eclipse4 from '../../assets/eclipse/Ellipse-17.png'
-import eclipse5 from '../../assets/eclipse/Ellipse-18.png'
+// import eclipse1 from '../../assets/eclipse/Ellipse-14.png'
+import eclipse1 from '@/public/assets/eclipse/Ellipse-14.png'
+// import eclipse2 from '../../assets/eclipse/Ellipse-15.png'
+import eclipse2 from '@/public/assets/eclipse/Ellipse-15.png'
+import eclipse3 from '@/public/assets/eclipse/Ellipse-16.png'
+import eclipse4 from '@/public/assets/eclipse/Ellipse-17.png'
+import eclipse5 from '@/public/assets/eclipse/Ellipse-18.png'
+// import eclipse3 from '../../assets/eclipse/Ellipse-16.png'
+// import eclipse4 from '../../assets/eclipse/Ellipse-17.png'
+// import eclipse5 from '../../assets/eclipse/Ellipse-18.png'
 
 
 
