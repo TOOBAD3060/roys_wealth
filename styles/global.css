@@ -62,7 +62,7 @@
       @apply border-b-[#2F4333] border-b-2 text-[#292929] font-medium
     }
     .inputStyle{
-      @apply text-grey-light focus:outline-0 bg-[#F2F2F2] border border-[0.5px] border-[#747474] rounded-[10px] py-3 px-5 mt-2 w-full
+      @apply text-grey-light focus:outline-0 bg-[#F2F2F2] border-[0.5px] border-[#747474] rounded-[10px] py-3 px-5 mt-2 w-full
     }
     .blurBox{
       @apply h-[35px] w-[35px] rounded-full blur-[12.5px] -z-10 absolute

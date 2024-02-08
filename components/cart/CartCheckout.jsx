@@ -1,3 +1,4 @@
+'use client'
 import React, {useState, useEffect} from 'react'
 import { CartItem } from './CartItem'
 import { ToastContainer, toast } from 'react-toastify'
@@ -105,7 +106,7 @@ export const CartCheckout = ({hidden, width}) => {
     <Modal isOpen={modalIsOpen} onRequestClose={toggleModal}>
         <div className='grid grid-cols-2 my-2 text-xs md:text-base'>
             <button onClick={toggleModal} className='h-[3.5rem] px-8 flex items-center border-2 border-grey-dark mr-4'>SAVE FOR LATER</button>
-            <button onClick={confirmCartRemove} className='bg-grey-dark text-white h-[3.5rem] px-8 flex items-center flex items-center justify-center'>REMOVE ITEM</button>
+            <button onClick={confirmCartRemove} className='bg-black text-white h-[3.5rem] px-8  flex items-center justify-center'>REMOVE ITEM</button>
         </div>
     </Modal>
     <div className={'w-3/5 mx-auto mt-5 mb-8 hidden ' + hidden}>

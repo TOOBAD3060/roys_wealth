@@ -23,7 +23,7 @@ function ProductItem () {
     const {products, setCart, cart, toggleFavorite, favorite} = useGlobalContext()
     const [qty, setQty] = useState(1)
     const [disableButton, setDisableButton] = useState(false)
-    const navigate = useRouter()
+    const router = useRouter()
     
     // find the product with the id from url parameter
     const openProduct = products.find(item => item.id == productId)
@@ -69,7 +69,7 @@ function ProductItem () {
         //Show suckcessful toast
         toast("Product Added Successfuly!", {type: 'success'});
         //Navigate to the cart page
-        navigate('/carts')
+        router.push('/carts')
     }
 
     // reducing the quantity selected while it's greate than 1
@@ -89,8 +89,17 @@ function ProductItem () {
                     </section>
 
                     <main className='md:border flex-col md:flex-row border-grey flex text-grey leading-[97%]'>
-                        <div className='md:w-2/5 shrink-0 md:border-r border-r-grey md:py-5 md:px-3'>
-                            <img src={openProduct && openProduct.url} alt="" className='w-full'/>
+                        <div className='md:w-2/5 flex flex-col md:h-content  shrink-0 md:border-r border-r-grey md:py-5 md:px-3'>
+                            <div className=" md:h-72 ">
+                            <img src={openProduct && openProduct.url} alt="" className='w-full h-full '/>
+                            </div>
+                            <div className="pt-6 md:h-72">
+                            <img src={openProduct && openProduct.url} alt="" className='w-full h-full '/>
+                            </div>
+                           
+                           
+                           
+
                         </div>
                         <div className='w-full flex flex-col'>
                             <div className='flex md:border-b border-b-grey md:px-5 pt-4 md:py-3 justify-between items-center'>
@@ -113,7 +122,7 @@ function ProductItem () {
                                         <button onClick={()=> setQty(prevValue => prevValue+1)} className='ml-3'>+</button>
                                     </div>
                                     <div className='flex'>
-                                        <button disabled={disableButton ? true : false} id='add-to-cart' onClick={handleClick} data-id={`${openProduct && openProduct.id}`} className='bg-blue-500   disabled:bg-blue/[0.5]  rounded-[3px] px-6 md:px-8 h-[3.5rem] flex items-center  text-white font-medium'>
+                                        <button disabled={disableButton ? true : false} id='add-to-cart' onClick={handleClick} data-id={`${openProduct && openProduct.id}`} className='bg-blue  disabled:bg-blue/[0.5]  rounded-[3px] px-6 md:px-8 h-[3.5rem] flex items-center  text-white font-medium'>
                                             <span>Add to Cart</span>
                                             <VscArrowRight className="h-[64px] w-[24px] ml-2" />
                                         </button>
