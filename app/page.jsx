@@ -23,18 +23,19 @@ export default function Home() {
             className="clash-d2 mb-[30px] px-4 font-medium md:font-semibold text-center md:text-[80px] text-[2rem] leading-[150%] md:leading-[120%] mt-10 mx-auto 
       tracking-wide"
           >
-            Photography is poetry{" "}
-            <span className="md:inline hidden">
-              & <br />
-            </span>{" "}
-            <span className="md:hidden">and</span> beautiful untold stories
+            Discover the perfect  {" "}
+            {/* <span className="md:inline hidden"> */}
+               <br />
+            {/* </span>{" "} */}
+            {/* <span className="md:hidden"> and</span>  */}
+            blend of fashion with us
           </h1>
 
           <p className="text-center md:text-[1.25rem] px-4 font-medium leading-[156%] md:leading-[120%] mx-auto  ">
-            Flip through more than 10,000 vintage shots, old photograghs,
-            historic
-            <br className="hidden md:inline" /> images and captures seamlessly
-            in one place. Register to get top access.
+          Flip through our various collections of hoodies, shoes, sweat pants, 
+            <br className="hidden md:inline" /> shirts, caps, and varsity jackets
+             seamlessly in one place.
+            
           </p>
           <div className="md:overflow-x-scroll">
             <Hero />
