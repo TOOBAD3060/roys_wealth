@@ -40,7 +40,7 @@ export const Header = () => {
         />
         <Link href="/">
           <h1 className="px-[30px] text-grey-dark text-[1.5rem] mb-[50px] font-bold font-stix">
-            ARTSY.
+            ROYSWEALTH.
           </h1>
         </Link>
         <ul className="px-[30px]">
@@ -82,7 +82,7 @@ export const Header = () => {
           {/* main header */}
           <Link href='/'>
             <h1 className="text-bold text-3xl font-semibold clash-d2 uppercase leading-[150%]">
-              Artsy.
+              Royswealth.
             </h1>
           </Link>
         </div>

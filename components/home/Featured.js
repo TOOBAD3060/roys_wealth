@@ -59,12 +59,13 @@ export const Featured = () => {
             </div>
             <article className="lg:w-1/2 flex flex-col justify-between text-grey lg:mr-[50px]">
               <h4 className="text-[30px] md:text-[2.5rem] font-semibold w-full text-center lg:text-left lg:font-bold font-clash lg:font-stix absolute text-white lg:text-grey top-12 lg:text- md:top-20 lg:relative lg:top-0">
-                The Boolean Egyptian
+                Varsity Jackets
               </h4>
               <p className="text-[15px] md:text-xl mr-9 lg:mr-0 text-[#616161] lg:text-grey my-4 lg:my-0">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-                aliquam, purus sit amet luctus venenatis, lectus magna fringilla
-                urna, porttitor rhoncus dolor pur
+              Channel retro-cool vibes with our collection of varsity jackets. 
+              From classic letterman designs to modern twists, these jackets are the ultimate style MVPs. 
+              Whether you're cheering on the sidelines or strolling through the city, stand out in style with our varsity jackets.
+               Score yours today and embrace your inner champion!
               </p>
               <div className="flex items-center">
                 <div className="mr-[15px]">
