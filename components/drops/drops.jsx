@@ -6,7 +6,7 @@ import drop3 from '/public/assets/drops/drop3.png'
 export default [
     {
         "id": "d1",
-        "title": "eyo: eko for show",
+        "title": "eyo: eko for show yh",
         "creator": "aliya minat",
         "image": drop1,
         "status": "upcoming",
